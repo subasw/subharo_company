@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Subharo Budget Mart{% endblock %}
+
+{% block content %}
+  <div class="container">
+    {% for abouts in about %}
+    <img class="image"  class="img-fluid" src="{{ abouts.image.url }}" alt="">
+    <h3 class="head"><center>{{ abouts.title }}</center></h3>
+    <p>{{ abouts.description }}</p>
+    {% endfor %}
+  </div>
+
+
+{% endblock %}

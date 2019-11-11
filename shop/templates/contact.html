@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}Subharo Budget Mart | contact {% endblock %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly.</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-7 mb-md-0 mb-5">
+            <form class="contact-page" id="contact-form" name="contact-form" action="" method="POST">
+              {% csrf_token %}
+                <!--Grid row-->
+                <div class="row">  <!--Grid column-->
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            {{ form|crispy }}
+                        </div>
+                    </div>
+                  </div>
+                    <!--Grid column-->
+
+
+
+            </form>
+
+            <div class="text-center ">
+                <a class="btn btn-info" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+
+        <div class="col-md-5 text-center">
+
+                    <h4>388/A, Athurugiriya Road, Arangala.</h4><br>
+                    <a href="{% url 'home' %}"><i class="fas fa-map-marker-alt"></i></a>
+                    <h4>Hotline - 011 207 5833  </h4>
+
+
+
+                      <h4>alankagroup@gmail.com  </h4>
+
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</div>
+<!--Section: Contact v.2-->
+
+
+{% endblock %}<!--Section: Contact v.2-->
