@@ -6,7 +6,7 @@ from .forms import ContactForm
 def home(request):
     items = Item.objects.all()
     context = {'items': items}
-    return render(request, 'index.html', context)
+    return render(request, 'home.html', context)
 
 
 
