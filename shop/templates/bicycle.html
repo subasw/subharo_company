@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Stationary Items {% endblock %}
+
+{% block content %}
+<div class="container">
+  <h4>Bicycles</h4>
+  <div class="row">
+    {% for item in items %}
+      {% if item.category == 'B' %}
+      <div class="card-deck mx-auto align-items-center">
+        <div class="card card-inverse card-success text-center" style="width: 15.9rem;">
+          <a href="{% url 'single_product' slug=item.slug %}"><img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap"></a>
+          <div class="card-body">
+            <a style="text-decoration:none" href="{% url 'single_product' slug=item.slug %}"><b>{{ item.name }}</b></a>
+            <p class="card-text">{{ item.description|truncatechars:20 }}.</p>
+            <a style="text-decoration:none" href="{% url 'single_product' slug=item.slug %}"><div class="product-price">Rs.{{ item.price }}</div></a>
+          </div>
+        </div>
+      </div>
+   {% endif %}
+  {% endfor %}
+  </div>
+</div>
+{% endblock %}

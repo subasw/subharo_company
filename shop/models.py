@@ -10,6 +10,7 @@ CATEGORY_CHOICES = (
                     ('H' , 'household'),
                     ('F' , 'furniture'),
                     ('S' , 'stationary'),
+                    ('B' , 'bicycle')
 )
 
 class Item(models.Model):
@@ -40,7 +41,7 @@ class Contact(models.Model):
     email = models.EmailField(blank=True, null=True)
     message = models.TextField(blank=True, null=True)
 
-    
+
 
 
     def __str__(self):

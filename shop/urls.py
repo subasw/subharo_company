@@ -11,6 +11,7 @@ urlpatterns = [
     path('about-us/', views.about, name='about'),
     path('gift-items/', views.gift_items, name='gift_items'),
     path('electric-items/', views.electric_items, name='electric_items'),
+    path('bicycles/', views.bicycle, name='bicycle'),
     path('household-items/', views.household_items, name='household_items'),
     path('furniture-items/', views.furniture_items, name='furniture_items'),
     path('stationary_items/', views.stationary_items, name='stationary_items'),

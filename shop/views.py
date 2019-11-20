@@ -52,6 +52,11 @@ def stationary_items(request):
     context = {'items': items}
     return render(request, 'stationary.html', context)
 
+def bicycle(request):
+    items = Item.objects.all()
+    context = {'items': items}
+    return render(request, 'bicycle.html', context)
+
 
 def contact(request):
     if request.method == 'POST':
